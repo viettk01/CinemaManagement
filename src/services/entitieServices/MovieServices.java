@@ -43,7 +43,7 @@ public class MovieServices {
             for (int j = 0; j < array[i].length; j++) {
                 System.out.print("|" + i + j + ": " + array[i][j] + "| ");
             }
-            System.out.println("");
+            System.out.println();
         }
         System.out.println("Nhập số hàng và cột của ghế mà bạn muốn mua:");
         System.out.print("Hàng: ");
@@ -93,7 +93,7 @@ public class MovieServices {
                 double ticketPrice = movie.getPrice() - cost;
                 String number = "[" + rowIndex + columnIndex + "]";
 
-                Bill bill = new Bill(movie.getName(), number, ticketPrice);
+                Bill bill = new Bill(idUser ,movie.getId(), movie.getName(), number, ticketPrice);
                 System.out.println(bill);
                 System.out.println("bạn có đồng ý mua vé không?");
                 System.out.println("1. Có");

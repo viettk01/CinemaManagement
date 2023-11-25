@@ -85,6 +85,7 @@ public class AccountServices {
                 changePhoneNumber(idUser);
                 break;
             default:
+                stateCustomer.customerMenuState(idUser);
                 break;
         }
     }

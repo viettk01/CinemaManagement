@@ -6,6 +6,7 @@ import entities.managerPlan.Training;
 import entities.managerPlan.WorkSchedule;
 import entities.movie.Bill;
 import entities.movie.Movie;
+import entities.movie.Rate;
 import entities.user.UserCustomer;
 import entities.user.UserStaff;
 import entities.voucher.Voucher;
@@ -96,7 +97,10 @@ public abstract class Parameter {
 
     // TARGET
     public static final Map<Integer, Target> targetMap = new HashMap<>();
+
     // TRAINING
     public static final Map<Integer, Training> trainingMap = new HashMap<>();
 
+    // RATE
+    public static final Map<Integer, Rate> rateMap = new HashMap<>();
 }

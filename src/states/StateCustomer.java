@@ -43,4 +43,9 @@ public class StateCustomer {
     public void billInfoState(int idUser) {
         Parameter.customerSevice.printBill(idUser);
     }
+
+    // State cho người dùng đánh giá phim
+    public void rateMovieState(int idUser) {
+        Parameter.customerSevice.rateChose(idUser);
+    }
 }

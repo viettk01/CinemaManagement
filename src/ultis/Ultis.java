@@ -21,8 +21,8 @@ public class Ultis {
     // Các hàm input
 
     public void pressEnter() {
-        System.out.println("Ấn Enter để tiếp tục");
-        String ok = scanner.nextLine();
+        System.out.println("Ấn để tiếp tục");
+        scanner.nextLine();
     }
 
     public int inputInt() {

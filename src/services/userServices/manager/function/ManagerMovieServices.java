@@ -85,6 +85,7 @@ public class ManagerMovieServices {
             default -> stateManager.stateManagerMovie(idManager);
         }
     }
+
     public void printInfoMovieTrue(int idManager) {
         System.out.println("Danh sách phim đang được chiếu");
         for (Map.Entry<Integer, Movie> movieEntry : movieMap.entrySet()) {

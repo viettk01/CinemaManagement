@@ -5,4 +5,5 @@ public class Main {
         Parameter.state.initState(); // state khởi động
         Parameter.state.startState(); // state bắt đầu
     }
+
 }

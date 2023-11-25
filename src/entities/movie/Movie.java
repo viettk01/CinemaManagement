@@ -3,6 +3,9 @@ package entities.movie;
 import entities.Rule;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Movie {
 
@@ -16,11 +19,16 @@ public class Movie {
     private Rule rule;
     private Ticket[][] ticket; // vé
     private int totalSold;
+    private Map<Integer, Rate> rateMap;
 
     public Movie() {
     }
 
-    public Movie( String name, String description,  LocalDate releaseDate, Genre genre, double price, Ticket[][] ticket, Rule rule) {
+    public Movie(Map<Integer, Rate> rateMap) {
+        this.rateMap = rateMap;
+    }
+
+    public Movie(String name, String description, LocalDate releaseDate, Genre genre, double price, Ticket[][] ticket, Rule rule) {
         this.id = ++autoId;
         this.name = name;
         this.description = description;
@@ -41,6 +49,14 @@ public class Movie {
         this.ticket = ticket;
         this.rule = rule;
         this.totalSold = totalSold;
+    }
+
+    public Map<Integer, Rate> getRateMap() {
+        return rateMap;
+    }
+
+    public void setRateMap(Map<Integer, Rate> rateMap) {
+        this.rateMap = rateMap;
     }
 
     public Rule getRule() {
@@ -131,6 +147,7 @@ public class Movie {
                 "\n- Nội dung: " + description +
                 "\n- Ngày công chiếu: " + releaseDate +
                 "\n- Thể Loại: " + genre +
-                "\n- Giá vé: " + price;
+                "\n- Giá vé: " + price +
+                "\n- Bình luận của người xem: " + rateMap;
     }
 }

@@ -1,15 +1,34 @@
 package entities.movie;
 
 public class Bill {
-
+    private int idUser;
+    private int movieId;
     private String movieName;
     private String number;
     private double price;
 
-    public Bill(String movieName, String number, double price) {
+    public Bill(int idUser ,int movieId, String movieName, String number, double price) {
+        this.idUser = idUser;
+        this.movieId = movieId;
         this.movieName = movieName;
         this.number = number;
         this.price = price;
+    }
+
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
+    }
+
+    public int getMovieId() {
+        return movieId;
+    }
+
+    public void setMovieId(int movieId) {
+        this.movieId = movieId;
     }
 
     public double getPrice() {
@@ -39,10 +58,10 @@ public class Bill {
 
     @Override
     public String toString() {
-        return "Bill[" +
+        return "HÓA ĐƠN [" +
                 "Tên Phim: " + movieName +
-                " number: " + number +
-                " price: " + price +
+                " | Số ghế: " + number +
+                " | Giá vé: " + price +
                 ']';
     }
 }
